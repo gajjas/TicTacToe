@@ -1,0 +1,40 @@
+.content{
+  display: block;
+  width: 90%;
+  margin:10px auto;
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+.container-fluid{
+  display: block;
+  margin: 0;
+  padding: 0;
+  padding-top: 13%;
+}
+
+.title {
+  user-select: none;
+  text-align: center;
+}
+
+.indexbutton {
+  color: #424242;
+  display: block;
+  align-self: center;
+  width: 80%;
+  margin:20px auto;
+  text-align: center;
+  text-decoration: none;
+}
+
+.indexbutton:hover{
+  text-decoration: none;
+}
+
+hr {
+  border: 0;
+  height: 1px;
+  width: 90%;
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0), #212121, rgba(0, 0, 0, 0));
+}

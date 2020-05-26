@@ -1,0 +1,39 @@
+<% include ./partials/header %>
+<link rel="stylesheet" href="/stylesheets/register.css">
+<script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+<script src="/javascripts/register.js"></script>
+<% include ./partials/nav %>
+
+<form class="registerForm" method="POST" action="/register">
+    <label>
+        <p class="label-txt">ENTER YOUR EMAIL</p>
+        <br>
+        <input type="text" placeholder="Email" class="input" name="email" required>
+        <div class="line-box">
+            <div class="line"></div>
+        </div>
+    </label>
+    <br>
+    <label>
+        <p class="label-txt">ENTER YOUR USERNAME</p>
+        <br>
+        <input type="text" placeholder="Username" class="input" name="username" required>
+        <div class="line-box">
+            <div class="line"></div>
+        </div>
+    </label>
+    <br>
+    <label>
+        <p class="label-txt">ENTER YOUR PASSWORD</p>
+        <br>
+        <input type="password" placeholder="Password" class="input" name="password" autocomplete="on" required>
+        <div class="line-box">
+            <div class="line"></div>
+        </div>
+    </label>
+    <button class="submit" type="submit">Submit</button>
+</form>
+
+
+
+<% include ./partials/footer %>

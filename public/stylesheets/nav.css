@@ -1,0 +1,14 @@
+nav {
+    background-color: #F5F5F5;
+}
+
+.navform{
+    margin-right: 20px;
+}
+
+body {
+    background-color: #F5F5F5;
+    color: #424242;
+    font: 20px "Lucida Grande", Helvetica, Arial, sans-serif;
+    background: url("/images/background.jpg") no-repeat center fixed;
+}
