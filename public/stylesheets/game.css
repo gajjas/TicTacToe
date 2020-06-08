@@ -1,0 +1,56 @@
+.grid-square:nth-child(odd){
+    background-color: aquamarine;
+}
+
+.grid-square:nth-child(even){
+    background-color: white;
+}
+
+.grid-square{
+    height: 33.33%;
+    width: 33.33%;
+}
+
+img{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    padding: 15%;
+}
+
+.grid{
+    border: 3px solid aquamarine;
+    height: 60vw;
+    width: 60vw;
+    margin: inherit;
+    padding: 0;
+}
+
+.list-container{
+    padding: 1rem;
+    text-align: center;
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), #212121, rgba(0, 0, 0, 0));
+}
+
+.wrap{
+    height: 100%;
+    height: -moz-fill-available;
+    height: -webkit-fill-available;
+    display: flex;
+    padding: 0;
+    margin: 0;
+}
+
+.controls{
+    padding-top: 5vh;
+}
+
+.btn-success {
+    margin: 0;
+    color: #212121;
+}

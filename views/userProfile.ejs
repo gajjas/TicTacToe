@@ -8,7 +8,7 @@
         <div class="profile">
             <div class="row">
                 <h2 class=" col-12 username"><%- data.username %></h2>
-                <img class="img-thumbnail col-7 mx-auto d-block userImage" src="<%- data.profilePicture %>">
+                <img class="img-thumbnail col-7 mx-auto d-block userImage" src="/images/profile.png">
             </div>
         </div>
     </div>
@@ -19,20 +19,19 @@
             <table class="table table-striped table-success">
                 <thead>
                     <tr>
-                        <th scope="col">Data</th>
+                        <th scope="col">Date</th>
                         <th scope="col">Opponent</th>
                         <th scope="col">Outcome</th>
                     </tr>
                 </thead>
                 <tbody>
-                    <% for( let x = 1; x <= 10; x++ ) { %>
-                    <tr>
-                        <td>Date</td>
-                        <td>Mark</td>
-                        <td>W</td>
-                    </tr>
-                    <% } %>
-
+                    <% data.games.forEach(game => { %> 
+                        <tr data-href="/game/<%- game.id %>">
+                            <td><%- game.date %></td>
+                            <td><%- game.opponent %> </td>
+                            <td><%- game.outcome %> </td>
+                        </tr>
+                    <%});%>
                 </tbody>
             </table>
         </div>
@@ -40,5 +39,18 @@
     </div>
 </div>
 
+<script>
+    function enter(){}
+    var handler = function(){}
+
+    $("tr[data-href]").on("click", function(){
+        window.location.href = this.dataset.href;
+    });
+    $("tr[data-href]").hover(function() {
+        $(this).css('cursor','pointer');
+    }, function() {
+        $(this).css('cursor','auto');
+    });
+</script>
 
 <% include ./partials/footer %>
