@@ -18,7 +18,7 @@ router.get('/:id', function (req, res) {
             gameData.playerTwo = p2.username;
             gameData.date = game.datePlayed;
             gameData.result = game.gameResult;
-            gameData.gameString = Array.from(game.gameString);
+            gameData.gameString = game.gameString;
 
             console.log(gameData)
             res.render("game", { data: gameData });

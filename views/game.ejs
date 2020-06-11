@@ -2,6 +2,10 @@
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="/stylesheets/game.css">
+<script>
+    var st = <%- data.gameString %>;
+</script>
+<script src="/javascripts/game.js"></script>
 
 <% include ./partials/nav %>
 
@@ -10,11 +14,10 @@
         <h1>Game</h1>
         <hr>
         <div class="container row grid">
-
-            <% for(var x = 0; x < 9; x++) { %>
+            <% for(var x = 1; x <= 9; x++) { %>
                 
                 <div class="d-flex justify-content-center container col-4 <%- x %> grid-square">
-                    <!-- <% if(x==4) {%> 
+                    <!-- <% if(x==4 || x==8) {%> 
                     <img src="/images/X.png">
                     <% } %>  -->
                 </div>
@@ -23,11 +26,11 @@
 
         </div>  
         <div class="d-flex justify-content-around controls"> 
-            <button type="button" class="btn btn-success">
+            <button type="button" onclick="prev()" class="btn btn-success prev">
                 <i class="fa fa-arrow-left"></i>
                 Prev
             </button>
-            <button type="button" class="btn btn-success">
+            <button type="button" onclick="next()" class="btn btn-success next">
                 Next
                 <i class="fa fa-arrow-right"></i>
             </button>
